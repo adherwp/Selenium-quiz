@@ -11,6 +11,11 @@ async function opensource() {
   
   await driver.get("https://demo.1crmcloud.com/index.php");
   await driver.findElement(By.className("meta-profile")).click();
+
+  var assert = require('assert');
+
+  let tes = await driver.findElement(By.id("_form_header")).findElement(By.tagName("h3")).getText();
+  await assert.equal(tes, "Administrator", "gagal bos");
 }
 
 opensource();
