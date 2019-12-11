@@ -1,6 +1,6 @@
 const { Builder, By, Key, util } = require("selenium-webdriver");
 
-async function opensource() {
+async function orange() {
   
   let driver = await new Builder().forBrowser("chrome").build();
   
@@ -15,4 +15,4 @@ async function opensource() {
   await assert.equal(tes, "Welcome Admin", "gagal bos");
 }
 
-opensource();
+orange();
